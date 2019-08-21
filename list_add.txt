@@ -1,0 +1,7 @@
+def list_add(items):
+    num_sum = 0
+    for i in items:
+        num_sum = num_sum+i
+    print(num_sum)
+list_add([1,2,5,6,80])  
+
