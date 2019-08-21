@@ -1,0 +1,6 @@
+def guess_age():
+    name=input('enter name:')
+    age=int(input('enter age:'))
+    year=str((100 - age)+2019)
+    print('hurray! you turn 100 years in {}',format(year))
+guess_age()
