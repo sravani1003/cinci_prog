@@ -1,0 +1,15 @@
+def drive_speed():
+    sl=70
+    dp=0
+    s=int(input('enter the speed of vehicle:'))
+    if(s<sl):
+        print("OK")
+    elif(s>sl):
+        dp=(s-sl)/5
+        print("demerit points:",format(dp))
+    else:
+        print("please enter proper speed")
+    if(dp>12):
+        print("demerit limit crossed, driver license suspended")
+drive_speed()
+
