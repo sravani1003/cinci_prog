@@ -1,0 +1,13 @@
+item_find=int(input('enter the number to find'))
+def linearSearch(*args):
+    for i in range(len(args)):
+        if(args[i]==item_find):
+            return i
+
+    
+x=linearSearch(1,5,3,22,4,8)
+if(x>=0):
+    print('number {} is found at {}'.format(item_find,x))
+else:
+    print('number {} not found'.format(item_find))
+

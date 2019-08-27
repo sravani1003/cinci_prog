@@ -1,0 +1,20 @@
+item_find=int(input('enter the number to search:'))
+def binarySearch(*args):
+    start=0
+    end=len(args)
+    mid=(start+end)//2
+    while start<end:
+        if(item_find<args[mid]):
+            end=mid
+        elif(item_find>args[mid]):
+            start=mid+1
+        else:
+            return mid
+    return -1
+
+x=binarySearch(1,5,12,40,55,65,70)
+if(x>=0):
+    print('number {} found at {}'.format(item_find,x))
+else:
+    print('number {} not found'.format(item_find))
+

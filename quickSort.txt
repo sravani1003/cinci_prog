@@ -1,0 +1,23 @@
+def quickSort(items,first,last):
+        if first<last:
+                m=partition(items,first,last)
+                quickSort(items,first,m-1)
+                quickSort(items,m+1,last)
+def partition(items,first,last):
+        pivot=items[first]
+        l=first+1
+        r=last-1
+        while items[l]<=pivot and l<=r:
+                l+=1
+        while items[r]>=pivot and l<=r:
+                r+=1
+        if r>l:
+                items[l], items[r]=items[r], items[l]
+        else:
+            items[start], items[r]=items[r], items[start]
+            return r
+items = [5,4,11,6,2,8,3,9,1]
+n=len(items)
+quickSort(items,0,n-1)
+print(items[i])
+

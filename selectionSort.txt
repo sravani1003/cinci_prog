@@ -1,0 +1,9 @@
+def selectionSort(*args):
+    min=0
+    for i in range(len(args)):
+        if args[i]<args[min]:
+            min=i
+            args[i], args[min]=args[min], args[i]
+    return args
+selectionSort([1,5,2,8,6,7,4])
+

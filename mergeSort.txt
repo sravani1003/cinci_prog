@@ -1,0 +1,35 @@
+def mergeSort(items,first,last):
+    m=len(items)//2
+    mergeSort(items,first,m)
+    mergeSort(items,m,last)
+    mergeList(items,first,m,last)
+
+def mergeList(items,first,m,last):
+    k=first
+    i=0
+    j=0
+    l=items[:m]
+    r=items[m:]
+    while(first+i<m and m+j<last):
+	    if(l[i]<=r[j]):
+	        items[k]=l[i]
+	        i=i+1
+	    else:
+	        items[k]=r[j]
+	        j=j+1
+	    k=k+1
+    if first+i<m:
+        while k<last:
+            items[k]=l[i]
+            i=i+1
+            k=k+1
+    else:
+        while k<last:
+            items[k]=r[j]
+            j=j+1
+            k=k+1
+ 
+items=[5,4,8,1,6]
+mergeSort(items,0,len(items))
+print(items)
+
